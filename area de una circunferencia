@@ -1,3 +1,4 @@
+C++
 // area de una circunferencia.cpp : Defines the entry point for the console application.
 //
 
@@ -18,3 +19,11 @@ void main()
 
 	
 }
+PSEINT
+Proceso areadeunacircunferencia
+	Escribir 'insertar el radio:'
+	Leer r
+	Escribir 'area:'
+	area<-(3.1416*r*r)
+	Escribir area
+FinProceso
