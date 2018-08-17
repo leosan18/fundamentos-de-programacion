@@ -1,3 +1,4 @@
+C++
 // area del cuadrado.cpp : Defines the entry point for the console application.
 //
 
@@ -18,3 +19,11 @@ void main()
 
 	
 }
+PSEINT
+Proceso areadeuncuadrado
+	Escribir 'insertar el lado:'
+	Leer l
+	Escribir 'area:'
+	area<-(l*l)
+	Escribir area
+FinProceso
