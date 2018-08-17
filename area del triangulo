@@ -1,3 +1,4 @@
+C++
 // area del triangulo.cpp : Defines the entry point for the console application.
 //
 
@@ -20,3 +21,13 @@ void main()
 
 	
 }
+PSEINT
+Proceso areadeuntriangulo
+	Escribir 'insertar la base:'
+	Leer b
+	Escribir 'insertar la altura:'
+	Leer h
+	Escribir 'area:'
+	area<-(b*h)/2
+	Escribir area
+FinProceso
