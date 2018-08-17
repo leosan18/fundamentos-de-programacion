@@ -1,3 +1,4 @@
+C++
 // hola mundo.cpp : Defines the entry point for the console application.
 //
 
@@ -12,6 +13,7 @@ void main()
 	cout<<"soy leonardo sandoval";
 		getch();
 }
+PSEINT
 Proceso holamundo
 	Escribir "hola mundo"
 FinProceso
