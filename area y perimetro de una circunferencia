@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C++
+// perimetro y area de una circunferencia.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{
+	float p,r,pi=3.1416,a;
+	cout<<"determinaremos el area y perimetro de una circunferencia"<<endl;
+	cout<<"dar un valor a r:"<<endl;
+	cin>>r;
+	a=pi*r*r;
+	p=2*pi*r;
+	cout<<"su area es: "<<a<<endl;
+	cout<<"su perimetro: "<<p<<endl;
+	getch();
+}
