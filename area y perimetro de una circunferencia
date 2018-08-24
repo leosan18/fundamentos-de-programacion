@@ -1,32 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 C++
 // perimetro y area de una circunferencia.cpp : Defines the entry point for the console application.
 //
@@ -48,3 +19,13 @@ void main()
 	cout<<"su perimetro: "<<p<<endl;
 	getch();
 }
+PSEINT
+Proceso areayperimetrodecircunferencia
+	Escribir 'determinaremos el area y perimetro de una circunferencia'
+	Escribir 'dar un valor a r'
+	Leer r
+	a<-3.1416*r*r
+	p<-2*3.1416*r
+	Escribir 'su area es:',a
+	Escribir 'su perimetro es:',p
+FinProceso
