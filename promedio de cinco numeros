@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C++
+// promedio de cinco numeros.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{
+	float A,prom=0;
+	cout<<"determinaremos el promedio de cinco numeros que sean introducidos"<<endl;
+	cin>>A;
+	prom=prom+A;
+    cin>>A;
+	prom=prom+A;
+    cin>>A;
+	prom=prom+A;
+    cin>>A;
+	prom=prom+A;
+	cin>>A;
+	prom=prom+A;
+	cout<<"el promedio es:";
+	cout<<prom/5;
+    getch();
+}
