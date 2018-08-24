@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C++
+// cambio de valor.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float A,B,aux;
+	cout<<"inserte A:"<<endl;
+	cin>>A;
+	cout<<"inserte B:"<<endl;
+	cin>>B;
+	aux=A;
+	A=B;
+	B=aux;
+	cout<<"el nuevo valor de A es: "<<A<<endl;
+	cout<<"el nuevo valor de B es: "<<B<<endl;
+	getch();
+}
