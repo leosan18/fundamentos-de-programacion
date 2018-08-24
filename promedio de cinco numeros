@@ -1,32 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 C++
 // promedio de cinco numeros.cpp : Defines the entry point for the console application.
 //
@@ -54,3 +25,20 @@ void main()
 	cout<<prom/5;
     getch();
 }
+PSEINT
+Proceso promedio
+	Escribir 'sacaremos el promedio de 5 numeros dados por usted'
+	Leer a
+	prom<-prom+a
+	Leer a
+	prom<-prom+a
+	Leer a
+	prom<-prom+a
+	Leer a
+	prom<-prom+a
+	Leer a
+	prom<-prom+a
+	prom<-prom/5
+	Escribir "el promedio es:"
+	Escribir prom
+FinProceso
