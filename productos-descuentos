@@ -1,0 +1,33 @@
+C++
+// productos.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{double N,d1,d2,d3,d4,p1,p2,p3,p4,p5,p6,total,totalapagar,descuento;
+  cout<<"le mostraremos la cantidad a pagar aplicando descuentos segun su compra"<<endl;
+  cout<<"cuantos productos compro?"<<endl;
+  cin>>N;
+ if(N<=3){
+  cout<<"introduzco el precio de sus productos, en caso de haber comprado solo un producto anotar 0 en los siguientes precios"<<endl;
+  cin>>p1>>p2>>p3;
+  d1=0.3;
+  d2=0.2;
+  d3=0.1;
+  total=p1+p2+p3;
+  descuento=p1*d1+p2*d2+p3*d3;
+ }else{if(N>3&&N<=6){
+  cout<<"introduzca el precio de sus productos si no tiene mas productos introduzca 0 en el precio"<<endl;
+  cin>>p1>>p2>>p3>>p4>>p5>>p6;
+  d4=0.2;
+  total=p1+p2+p3+p4+p5+p6;
+  descuento=total*d4;}}
+  totalapagar=total-descuento;
+  cout<<"total:"<<total<<endl;
+  cout<<"total a pagar aplicando el descuento:"<<totalapagar;
+  getch();
+}
