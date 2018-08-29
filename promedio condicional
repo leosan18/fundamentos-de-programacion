@@ -1,0 +1,23 @@
+C++
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{float a,b,c,p;
+  cout<<"se sacara el promedio a 3 numeros ingresados por usted que pueden variar del 0 al 10"<<endl;
+  cout<<"intrduzca el primer numero:"<<endl;
+  cin>>a;
+  if(a>=0&&a<=10){
+  cout<<"ingrese el segundo numero"<<endl;
+  cin>>b;
+  if(b>=0&&b<=10){
+  cout<<"ingrese el tercer numero"<<endl;
+  cin>>c;
+  if(c>=0&&c<=10){
+  cout<<"el promedio es:"<<endl;
+  p=(a+b+c)/3;
+  cout<<p;}else{cout<<"error"<<endl;}}else{cout<<"error"<<endl;}}else{cout<<"error"<<endl;}
+  getch();
+ }
