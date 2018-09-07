@@ -1,0 +1,23 @@
+C++ DOWHILE
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+  { float sm,salariobruto,salarioneto;
+    char s;
+	sm=2060;
+	do{
+	cout<<"ingrese el salario bruto"<<endl;
+	cin>>salariobruto;
+	if(salariobruto>=4*sm)
+	   salarioneto=salariobruto-0.251*salariobruto;
+	else
+		salarioneto=salariobruto-salariobruto*0.121;
+	cout<<"el salario neto es:"<<endl;
+	cout<<salarioneto;
+	cout<<"desea continuar"<<endl;
+	cin>>s;
+	}while(s=='s');
+	getch();
+}
