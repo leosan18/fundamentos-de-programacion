@@ -1,0 +1,64 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float triangulo(float b,float h);
+float circulo(float r);
+float cuadrado(float l);
+
+void main ()
+{
+int opcion;
+float base,altura,radio,lado;
+float resultado=0;
+
+do{cout<<"MENU:"<<endl;
+cout<<"1.Area del triangulo :"<<endl;
+cout<<"2.Area del circulo :"<<endl;
+cout<<"3.Area del cuadrado :"<<endl;
+cout<<"0.Salir:"<<endl;
+cout<<"Escirbir su opcion:"<<endl;
+cin>>opcion;
+switch(opcion){
+case 1: cout<<"Ingresar la base del triangulo"<<endl;
+ cin>>base;
+ cout<<"Ingresar la altura del triangulo:"<<endl;
+    cin>>altura;
+ resultado=triangulo(base,altura);
+ cout<<"Area"<<resultado<<endl;
+ break;
+case 2: cout<<"Ingresar el radio de la circulo:"<<endl;
+cin>>radio;
+resultado=circulo(radio);
+break;
+case 3:cout<<"ingresar el lado de su cuadrado:"<<endl;
+cin>>lado;
+resultado=cuadrado(lado);
+break;
+case 0:cout<<"salir";
+break;
+default : cout<<"opcion invalidada:"<<endl;
+}
+if((opcion>=1)&&(opcion<=3))
+ cout<<"El resultado del calculo es:"<<resultado<<endl;
+}
+while (opcion!=0);
+
+}
+float triangulo(float b,float h){
+float resultado;
+resultado=(b*h)/2;
+return resultado;
+}
+float circulo(float r){
+float resultado;
+resultado=r*r*3.141592;
+return resultado;
+}
+float cuadrado(float l){
+float resultado;
+resultado=l*l;
+return resultado;
+}
