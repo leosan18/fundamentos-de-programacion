@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float prod(float n);
+void main()
+{
+   float n,p;
+   cout<<"introduzca el numero maximo del producto"<<endl;
+   cin>>n;
+   p=prod(n);
+   cout<<"el producto es"<<endl;
+   cout<<p;
+   getch();
+}
+  float prod(float n){
+  float p=1;
+  for(int i=1;i<=n;i++){
+	  p=p*i;
+  }
+  return p;
+  }
