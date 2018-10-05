@@ -2,18 +2,18 @@
 #include <iostream>
 #include "conio.h"
 using namespace std;
-int sumaimpares (int n);
+int sumaimp (int n);
 void main()
 {
-	int n, resp;
+	int n, x;
 	cout << "Ingrese el numero maximo de la serie" << endl;
 	cin >> n;
-	resp=sumaimpares(n);
+	x=sumaimp(n);
 	cout << "La suma es: "<<endl;
-  cout<< resp;
+  cout<< x;
 	getch();
 }
-int sumaimpares (int n)
+int sumaimp (int n)
 {
 	int s=0, i=1;
 	while (i<=n)
