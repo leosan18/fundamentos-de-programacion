@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int sumacuad(int n);
+void main()
+{ 
+ int resp,n;
+ cout<<"ingrese el numero maximo de la sumatoria"<<endl;
+ cin>>n;
+ resp=sumacuad(n);
+ cout<<"la sumatoria es"<<endl;
+ cout<<resp;
+ getch();
+}
+int sumacuad(int n){
+	int resp=0,i=1;
+	for(i=1;i<=n;i++){
+		resp=resp+(i*i);}
+		return resp;
+}
