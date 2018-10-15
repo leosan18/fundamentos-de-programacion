@@ -1,0 +1,37 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int multiplo(int a, int b);
+
+void main()
+
+{
+	int a,b,estatus;
+	cout<<"ingrese un numero"<<endl;
+	cin>>a;
+	cout<<"ingrese otro"<<endl;
+	cin>>b;
+	estatus=multiplo(a,b);
+	cout<<"el estatus es"<<endl;
+	cout<<estatus;
+	getch();
+}
+int multiplo(int a, int b)
+{
+	int menor,mayor,estatus;
+	if(a>b){
+		mayor=a;
+		menor=b;
+	}else{
+		mayor=b;
+		menor=a;
+	}
+	if(mayor%menor==0)
+	{
+		estatus=1;}
+	else{
+		estatus=0;}
+	return estatus;}
