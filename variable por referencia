@@ -1,0 +1,47 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+//los prototipos 
+float discriminante(float a,float b,float c);
+void reales (float a,float b,float c,float &x1,float &x2);
+//la & nos ayuda para que muestre dos o mas variables 
+void main()
+{
+	float a, b, c, resultado1, resultado2 ,D;
+    cout<<"ingresar los valores de a,b y c";
+    cin>>a>>b>>c;
+    D=discriminante(a,b,c);
+    if (D>0)
+	{
+	  reales(a,b,c,resultado1,resultado2);
+	  cout<<"raiz imaginaria 1 es:"<<resultado1<<endl;
+	  cout<<"raiz imaginaria 2 es:"<<resultado2<<endl;
+	}
+	if (D<0)
+	{
+		 reales(a,b,c,resultado1,resultado2);
+	  cout<<"raiz imaginaria 1 es:"<<resultado1<<endl;
+	  cout<<"raiz imaginaria 2 es:"<<resultado2<<endl;
+	}
+	if (D==0)
+	{
+    reales(a,b,c,resultado1,resultado2);
+	cout<<"la raiz unica es"<<resultado1<<endl;
+	}
+	getch();
+	
+}
+float discriminante(float a,float b, float c)
+{ 
+	float D;
+	D=(b*b)-(4*a*c);
+	return D;// Se debe devolver porque ha sido declarado con float
+}
+void reales (float a,float b,float c,float &x1,float &x2)
+{
+	x1=((-b+sqrt(pow(b,2)-4*a*c)))/(2*a);
+    x2=((-b-sqrt(pow(b,2)-4*a*c)))/(2*a);
+}
