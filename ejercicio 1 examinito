@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+void cargar(int a[],int tam);
+void arreglo(int a[],int tam);
+
+using namespace std;
+
+void main()
+
+{
+	int a[MAX],tam,x;
+	cout<<"ingrese el tamaño del vector"<<endl;
+	cin>>tam;
+	cargar(a,tam);
+	arreglo(a,tam);
+	getch();
+}
+   void cargar(int a[],int tam)
+   {
+	   for(int i=1;i<=tam;i++)
+	   {
+		   cout<<"a["<<i<<"]=";
+		   cin>>a[i];
+	   }
+	   
+   }
+        void arreglo(int a[],int tam)
+		{	
+			int x;
+			cout<<"cual numero desea que sea x"<<endl;
+	        cin>>x;
+			for(int i=0;i<=tam;i++)
+			{
+				a[i];
+				if(a[i]==x)
+					cout<<a[i];
+
+			}
+		}
+
+
+
