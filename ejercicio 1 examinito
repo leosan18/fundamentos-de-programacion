@@ -36,7 +36,7 @@ void main()
 			{
 				a[i];
 				if(a[i]==x)
-					cout<<a[i];
+					cout<<i;
 
 			}
 		}
