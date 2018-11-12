@@ -1,0 +1,47 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+
+using namespace std;
+
+void main()
+
+{
+	char cad[MAX], cadaux[MAX],aux;
+	int n;
+	cout<<"ingrese palabra: ";
+	cin.getline(cad,MAX,'\n');
+	
+	n=strlen(cad);
+	for(int i=0;i<n;i++)
+	{
+		if(cad[i]==' ')
+		{
+			for(int j=i;j<n;j++)
+			{
+				cad[j]=cad[j+1];
+			}
+			i--;
+			n--;
+		}
+	}
+	strcpy(cadaux,cad);
+	for(int i=0;i<n/2;i++)
+	{
+		aux=cad[i];
+		cad[i]=cad[n-1-i];
+		cad[n-1-i]=aux;
+	}
+	cout<<"la cadena invertida es"<<endl<<cad;
+	if(strcmp(cadaux,cad)==0)
+	{
+		cout<<"es palindromo"<<endl;
+	}
+	else{
+	cout<<"         no es palindromo"<<endl;
+	}
+	getch();
+}
