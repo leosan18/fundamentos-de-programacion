@@ -1,0 +1,95 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+using namespace std;
+bool cargar(string dato[],int t);
+void mostra(string dato2[],int t);
+void clasificar(string dato[], int t);
+bool buscar (string dato[], int t, string a);
+void main(){
+	string dato[MAX],nombre;
+	int t, opcion;
+    bool resp=false;
+	cout<<"Ingrese el tamanio : ";
+	cin>>t;
+    do{
+	   cout<<"------MENU------"<<endl;
+	   cout<<"1.ingresar"<<endl;
+	   cout<<"2.listar"<<endl;
+	   cout<<"3.clasificar"<<endl;
+	   cout<<"4.buscar"<<endl;
+	   cout<<"0.salir"<<endl;
+	   cout<<"cual opcion desea?"<<endl;
+	   cin>>opcion;
+	   switch (opcion){
+	      case 1: resp=cargar(dato,t); 
+		          break;
+		  case 2: if (resp==false)
+				      cout<<"Sin datos"<<endl;
+				  else 
+					  mostra(dato,t);
+				  break;
+		  case 3: if (resp==false)
+						cout<<"Sin datos"<<endl;
+				  else
+					  clasificar(dato,t);
+				  break;
+		  case 4: if(resp==false)
+					  cout<<"sin datos"<<endl;
+				  else{
+					  cin.ignore();
+					  cout<<"ingrese el nombre a buscar";
+					  getline(cin,nombre);
+					  if (buscar (dato,t,nombre))
+						  cout<<"Es tu amigo";
+					  else
+						  cout<<"No es tu amigo";
+				  }
+				  break;
+		  case 0:
+					cout<<"Salir"<<endl;
+					break;
+		  default: cout<<"opcion ivalida"<<endl;
+				   break;
+		}
+	   }while(opcion!=0);
+		getch();
+}
+bool cargar(string dato[],int t)
+{
+	bool resp=true;
+	cin.ignore();
+	for(int i=0;i<t;i++){
+		cout<<"ingrese nombres: "<<endl;
+		getline(cin,dato[i]);}
+    return resp;
+}
+
+void mostra(string dato2[],int t)
+{
+	for(int i=0;i<t;i++)
+		cout<<dato2[i]<<endl;
+}
+
+void clasificar(string dato[], int t)
+{
+	string aux;
+	for(int i=0;i<t-1;i++)
+		for(int j=i+1;j<t;j++){
+			if (dato[i]>dato[j]) {
+				aux=dato[i];
+				dato[i]=dato[j];
+				dato[j]=aux;
+			}
+	}
+}
+
+bool buscar (string dato[], int t, string a)
+{
+	for(int i=0;i<t;i++)
+		if (dato[i]== a)
+			return true;
+	return false;
+}
