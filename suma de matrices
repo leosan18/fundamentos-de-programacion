@@ -1,0 +1,77 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define fila 20
+#define col 20
+
+using namespace std;
+void cargarmatriz(double matrix [fila][col],int fil,int c);
+void mostrar(double matrix [fila][col],int fil,int c);
+void suma(double matrix [fila][col],int fil, int c);
+
+void main ()
+{
+	int fil,c,opcion,resp;
+	double matrix [fila][col];	
+	
+	cout<<"ingrese el numero de filas"<<endl;
+	cin>>fil;
+	cout<<"ingrese el numero de columnas"<<endl;
+	cin>>c;
+	do {
+	cout<<endl;
+	cout<<"======MENU====="<<endl;
+	cout<<"1.- cargar "<<endl;
+	cout<<"2.- mostrar "<<endl;
+	cout<<"3.- suma"<<endl;
+	cout<<"0.- salir "<<endl;
+	cin>>opcion;
+	switch (opcion)
+	{
+		case 1: cargarmatriz (matrix,fil,c); break;
+		case 2: mostrar (matrix,fil,c);break;
+		case 3: suma(matrix,fil,c);break;
+	}
+	}
+	while (opcion!=0);
+	getch();
+}
+void cargarmatriz(double matrix [fila][col], int fil, int c)
+{
+	for (int i=0;i<fil;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			cout<<"ingresar el elemento ""["<<i<<"]""["<<j<<"]: ";
+			cin>>matrix[i][j];
+			cout<<endl;
+		}
+	}
+}
+void mostrar(double matrix [fila][col], int fil, int c)
+{
+	for (int i=0;i<fil;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			cout<<"["<<i<<"]""["<<j<<"]";
+			cout<<matrix[i][j]<<endl;
+		}
+	}
+}
+
+void suma(double matrix [fila][col], int f, int c)
+{
+	double suma[fila][col],sumat[fila][col];
+	cout<<"ingrese la matriz con la que desea sumar: ";
+	cargarmatriz (suma,f,c);
+	for (int i=0;i<f;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			sumat[i][j]=matrix[i][j]+suma[i][j];
+		}
+	}
+mostrar (sumat,f,c);
+}
