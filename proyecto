@@ -1,0 +1,22 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+float tasaint(float sa,float in);
+
+using namespace std;
+
+void main()
+
+{    
+	float sa=100000, in=0.03;
+	cout<<"el monto obtenido debido a la tasa de interes es de:"<<endl;
+	tasaint(sa,in);
+	getch();
+}
+  float tasaint(float sa,float in){
+	  float ing;
+	  ing=sa*in;
+	  cout<<ing;
+	  return ing;
+  }
